@@ -1,0 +1,203 @@
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 9999;
+
+    .navbar {
+        margin-bottom: 20px;
+        background: red;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        border-radius: 8px;
+
+    }
+
+    &__logo {
+        padding: 0px 20px;
+        width: 130px;
+        height: 40px;
+
+        a {
+            img {
+                width: 130px;
+                height: 40px;
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &__icons {
+        margin: 8px;
+        padding: 5px 8px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background: #0004;
+        border-radius: 5px;
+
+        span {
+            color: white;
+        }
+    }
+
+    &__icon {
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__form {
+        width: 550px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        padding: 8px 0;
+        border: 1px solid black;
+        border-radius: 10px;
+        background: white;
+        padding: 0px 10px;
+
+        input {
+            flex: 1;
+            padding: 10px 20px;
+            outline: none;
+            border: none;
+            height: 100%;
+            font-size: 18px;
+            color: black;
+        }
+    }
+
+    &__form__btn {
+        margin: 5px 0;
+        padding: 10px 20px;
+        border: 1px solid green;
+        background: green;
+        font-size: 18px;
+        color: white;
+        border-radius: 15px;
+    }
+}
+
+@media (max-width:1100px) {
+    .header {
+        &__form {
+            max-width: 400px;
+        }
+    }
+}
+
+@media (max-width:950px) {
+    .header {
+        &__logo {
+            a {
+                img {
+                    width: 110px;
+                    height: 35px;
+                }
+            }
+        }
+
+        &__icons {
+            margin: 6px;
+            padding: 5px 8px;
+
+        }
+
+        &__icon {
+            img {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        &__form {
+            padding: 0;
+            width: 340px;
+
+            input {
+                flex: 1;
+                padding: 5px 10px;
+                font-size: 16px;
+            }
+        }
+
+        &__form__btn {
+            margin: 5px 10px;
+            padding: 8px 10px;
+            border-radius: 10px;
+        }
+    }
+}
+
+@media(max-width:860px) {
+    .header {
+        .navbar {
+            background: transparent;
+            display: block;
+        }
+
+        &__logo {
+            display: none;
+        }
+
+        &__icons {
+            display: none;
+
+        }
+
+        &__form {
+            padding: 0;
+            max-width: 100%;
+            border: 8px solid #aaa9;
+
+            input {
+                flex: 1;
+                padding: 5px 10px;
+                font-size: 16px;
+            }
+        }
+
+        &__form__btn {
+            margin: 0;
+            padding: 8px 10px;
+            border-radius: 0;
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width:345px) {
+    .header {
+        &__form {
+            padding: 0;
+            max-width: 100%;
+
+            input {
+                width: 100%;
+                padding: 5px 10px;
+                font-size: 16px;
+            }
+        }
+
+        &__form__btn {
+            margin: 0;
+            padding: 8px 10px;
+            border-radius: 0;
+
+        }
+    }
+}
